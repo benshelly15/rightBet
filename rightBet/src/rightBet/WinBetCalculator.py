@@ -19,7 +19,9 @@ class WinBetCalculator():
         '''
         
         
-    def calculateWinBet(self, stake, odds):
-        cost = (stake) * (odds) + (stake)
-        return round(cost,2)
+    def calculate(self, stake, odds, place):
+        winAmount = 0.00
+        if place == 1:
+            winAmount = (stake) * (odds) + (stake)
+        return round(winAmount,2)
         
