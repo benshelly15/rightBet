@@ -24,14 +24,14 @@ class HorseOdds():
         return self.horseOddsDecimal
     
     def getHorseNumber(self):
-        return self.gethorseNumber
+        return self.horseNumber
     
     def getHorseName(self):
-        return self.gethorseName
+        return self.horseName
         
     def setHorseOddsString(self, hos):
         self.horseOddsString = hos 
-        self.horseOddsDecimal = float(hos)
+        self.horseOddsDecimal = eval(hos)
         
     def setHorseNumber(self, hn):        
         self.horseNumber = hn
