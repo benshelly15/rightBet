@@ -21,8 +21,8 @@ class Test(unittest.TestCase):
 
     def testName(self):
         global calc
-        self.assertEquals(calc.calculate(1.00, 5.00, 1),6.00, "odds are wrong")
+        self.assertEquals(calc.calculate(2.00, 4.00, 1), 6.00, "odds are wrong")
 
 if __name__ == "__main__":
-    #import sys;sys.argv = ['', 'Test.testName']
+    # import sys;sys.argv = ['', 'Test.testName']
     unittest.main()
