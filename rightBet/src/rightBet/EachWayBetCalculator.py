@@ -5,7 +5,7 @@ Created on 16 Jan 2016
 '''
 from rightBet.WinBetCalculator import WinBetCalculator
 
-class EachWayBetCalculator():
+class EachWayBetCalculator(object):
     '''
     classdocs
     '''

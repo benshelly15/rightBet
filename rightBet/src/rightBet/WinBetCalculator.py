@@ -4,7 +4,7 @@ Created on 16 Jan 2016
 @author: BenShelly
 '''
 
-class WinBetCalculator():
+class WinBetCalculator(object):
     '''
     classdocs
     '''

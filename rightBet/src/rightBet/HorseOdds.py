@@ -4,19 +4,21 @@ Created on 17 Jan 2016
 @author: BenShelly
 '''
 
-class HorseOdds():
+class HorseOdds(object):
     '''
     classdocs
     '''
-    horseOddsString = ("")
-    horseOddsDecimal = 0.0
-    horseNumber = 0
-    horseName = ("")
 
-    def __init__(self):
+
+    def __init__(self, ):
         '''
         Constructor
         '''
+        __horseOddsString = ("")
+        __horseOddsDecimal = 0.0
+        __horseNumber = 0
+        __horseName = ("")
+        
     def getHorseOddsString(self):
         return self.horseOddsString 
     
@@ -36,6 +38,6 @@ class HorseOdds():
     def setHorseNumber(self, hn):        
         self.horseNumber = hn
         
-    def setHorseName (self,hn):
+    def setHorseName (self, hn):
         self.horseName = hn 
     
