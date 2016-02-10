@@ -3,7 +3,7 @@ Created on 10 Feb 2016
 
 @author: BenShelly
 '''
-from rightBet.RightBet import selectedHorses
+from rightBet.HorseOdds import HorseOdds
 from rightBet.WinBetCalculator import WinBetCalculator
 from rightBet.EachWayBetCalculator import EachWayBetCalculator
 import datetime

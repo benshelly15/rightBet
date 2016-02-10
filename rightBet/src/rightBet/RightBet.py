@@ -7,13 +7,14 @@ from rightBet.CsvReader import CsvReader
 from rightBet.RacecardConsoleView import RacecardConsoleView
 from rightBet.ConsoleReader import ConsoleReader
 from rightBet.BettingSlipConsoleView import BettingSlipConsoleView
+from rightBet.HorseOdds import HorseOdds
 
 if __name__ == '__main__':
     csvReader = CsvReader ()
     racecardConsoleView = RacecardConsoleView ()
-    consoleReader = ConsoleReader ()
     bettingSlipConsoleView = BettingSlipConsoleView()
     horseOddsArray = csvReader.readCsv()
+    consoleReader = ConsoleReader (horseOddsArray)
     racecardConsoleView.printRacecard(horseOddsArray)
     
     replay = True
