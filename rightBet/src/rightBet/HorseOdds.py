@@ -18,6 +18,8 @@ class HorseOdds(object):
         __horseOddsDecimal = 0.0
         __horseNumber = 0
         __horseName = ("")
+        __stake = 0.00
+        __winBet = True
         
     def getHorseOddsString(self):
         return self.horseOddsString 
@@ -30,6 +32,9 @@ class HorseOdds(object):
     
     def getHorseName(self):
         return self.horseName
+    
+    def getStake(self):
+        return self.stake
         
     def setHorseOddsString(self, hos):
         self.horseOddsString = hos 
@@ -40,6 +45,9 @@ class HorseOdds(object):
         
     def setHorseName (self, hn):
         self.horseName = hn
+    
+    def setStake (self, st):
+        self.stake = st
     
     def toString (self):
         retStr = ("")
