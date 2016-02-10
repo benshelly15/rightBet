@@ -33,7 +33,14 @@ class Test(unittest.TestCase):
         
     def testSetHorseOddsNumber(self):
         self.horseOdds.setHorseNumber(10)
-        self.assertEquals(self.horseOdds.getHorseNumber(),10, "testfailed") 
+        self.assertEquals(self.horseOdds.getHorseNumber(),10, "testfailed")
+        
+    def testToString(self):
+        self.horseOdds.setHorseNumber(10)
+        self.horseOdds.setHorseOddsString("11/2")
+        self.horseOdds.setHorseName("dave")
+        self.assertEquals(self.horseOdds.toString(), "10 dave                                       11/2", "test failed")
+         
 
 
 if __name__ == "__main__":

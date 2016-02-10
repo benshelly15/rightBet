@@ -10,7 +10,7 @@ class HorseOdds(object):
     '''
 
 
-    def __init__(self, ):
+    def __init__(self):
         '''
         Constructor
         '''
@@ -39,5 +39,12 @@ class HorseOdds(object):
         self.horseNumber = hn
         
     def setHorseName (self, hn):
-        self.horseName = hn 
+        self.horseName = hn
     
+    def toString (self):
+        retStr = ("")
+        retStr = (retStr) + str(self.horseNumber).rjust(2) + (" ")
+        retStr = (retStr) + self.horseName.ljust(40) + (" ")
+        retStr = (retStr) + self.horseOddsString.rjust(6)
+        
+        return (retStr)
