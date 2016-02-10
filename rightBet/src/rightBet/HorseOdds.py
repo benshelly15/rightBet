@@ -35,6 +35,9 @@ class HorseOdds(object):
     
     def getStake(self):
         return self.stake
+    
+    def isWinBet(self):
+        return self.winBet
         
     def setHorseOddsString(self, hos):
         self.horseOddsString = hos 
@@ -49,6 +52,9 @@ class HorseOdds(object):
     def setStake (self, st):
         self.stake = st
     
+    def setWinBet(self, wb):
+        self.winBet = wb
+        
     def toString (self):
         retStr = ("")
         retStr = (retStr) + str(self.horseNumber).rjust(2) + (" ")

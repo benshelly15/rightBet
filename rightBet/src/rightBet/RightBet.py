@@ -6,11 +6,13 @@ Created on 10 Feb 2016
 from rightBet.CsvReader import CsvReader
 from rightBet.RacecardConsoleView import RacecardConsoleView
 from rightBet.ConsoleReader import ConsoleReader
+from rightBet.BettingSlipConsoleView import BettingSlipConsoleView
 
 if __name__ == '__main__':
     csvReader = CsvReader ()
     racecardConsoleView = RacecardConsoleView ()
     consoleReader = ConsoleReader ()
+    bettingSlipConsoleView = BettingSlipConsoleView()
     horseOddsArray = csvReader.readCsv()
     racecardConsoleView.printRacecard(horseOddsArray)
     
@@ -26,4 +28,7 @@ if __name__ == '__main__':
                 if len(selectedHorses) == 8:
                     replay = False
         else:
-            replay = False        
+            replay = False 
+            
+    bettingSlipConsoleView.printToConsole(selectedHorses)        
+                   
