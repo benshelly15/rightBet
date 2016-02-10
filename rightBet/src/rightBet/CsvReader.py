@@ -28,7 +28,7 @@ class CsvReader(object):
                 horseOddsRow.setHorseOddsString(row[2])
                 horseOddsRow.setHorseName(row[1])
                 horseOddsRow.setHorseNumber(row[0])
-                print (horseOddsRow.toString())
+                #print (horseOddsRow.toString())
                 horseOddsArray.append(horseOddsRow)
                 
         return (horseOddsArray)
