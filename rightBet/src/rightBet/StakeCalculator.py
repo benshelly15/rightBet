@@ -14,7 +14,10 @@ class StakeCalculator(object):
         '''
         Constructor
         '''
-    def stake(self, stake):
+        __stake = 0
+        
+        
+    def setStake(self, stake):
         total = 0
         stake = int(input("Input Stake\n")) 
         stake = round(stake, 2)
@@ -22,3 +25,6 @@ class StakeCalculator(object):
         total = (total) + (stake)
         
         return total
+    
+    def getStake(self):
+        return self.setStake()

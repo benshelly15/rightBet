@@ -3,7 +3,10 @@ Created on 10 Feb 2016
 
 @author: BenShelly
 '''
-from rightBet.HorseOdds import HorseOdds
+from rightBet.CsvReader import CsvReader
+
+
+
 
 class ConsoleReader(object):
     '''
@@ -16,7 +19,7 @@ class ConsoleReader(object):
         Constructor
         
         '''
-        __horseOddsArray = hoa
+        self.setHorseOddsArray(hoa)
         
         
     def readFromConsole(self):
@@ -41,18 +44,24 @@ class ConsoleReader(object):
     
     def findHorseByNumber(self, horseNumber):
         retHorse = None
-        for horseOdds in self.horseOddsArray:
+        for horseOdds in self.getHorseOddsArray():
             if horseOdds.getHorseNumber() == horseNumber:
                 retHorse = horseOdds
-            break 
+                break 
         return retHorse
     
     def findHorseByName(self, horseName):
         retHorse = None
-        for horseOdds in self.horseOddsArray:
+        for horseOdds in self.getHorseOddsArray():
             if horseOdds.getHorseName() == horseName:
                 retHorse = horseOdds
             break 
         return retHorse
+    
+    def setHorseOddsArray (self, hoa):
+        self.__horseOddsArray = hoa
+        
+    def getHorseOddsArray(self):
+        return self.__horseOddsArray
         
             

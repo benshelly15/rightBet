@@ -14,51 +14,51 @@ class HorseOdds(object):
         '''
         Constructor
         '''
-        __horseOddsString = ("")
-        __horseOddsDecimal = 0.0
-        __horseNumber = 0
-        __horseName = ("")
-        __stake = 0.00
-        __winBet = True
+        self.__horseOddsString = ("")
+        self.__horseOddsDecimal = 0.0
+        self.__horseNumber = 0
+        self.__horseName = ("")
+        self.__stake = 0.00
+        self.__winBet = True
         
     def getHorseOddsString(self):
-        return self.horseOddsString 
+        return self.__horseOddsString 
     
     def getHorseOddsDecimal(self):
-        return self.horseOddsDecimal
+        return self.__horseOddsDecimal
     
     def getHorseNumber(self):
-        return self.horseNumber
+        return self.__horseNumber
     
     def getHorseName(self):
-        return self.horseName
+        return self.__horseName
     
     def getStake(self):
-        return self.stake
+        return self.__stake
     
     def isWinBet(self):
-        return self.winBet
+        return self.__winBet
         
     def setHorseOddsString(self, hos):
-        self.horseOddsString = hos 
-        self.horseOddsDecimal = eval(hos)
+        self.__horseOddsString = hos 
+        self.__horseOddsDecimal = eval(hos)
         
     def setHorseNumber(self, hn):        
-        self.horseNumber = hn
+        self.__horseNumber = hn
         
     def setHorseName (self, hn):
-        self.horseName = hn
+        self.__horseName = hn
     
     def setStake (self, st):
-        self.stake = st
+        self.__stake = st
     
     def setWinBet(self, wb):
-        self.winBet = wb
+        self.__winBet = wb
         
     def toString (self):
         retStr = ("")
-        retStr = (retStr) + str(self.horseNumber).rjust(2) + (" ")
-        retStr = (retStr) + self.horseName.ljust(40) + (" ")
-        retStr = (retStr) + self.horseOddsString.rjust(6)
+        retStr = (retStr) + str(self.__horseNumber).rjust(2) + (" ")
+        retStr = (retStr) + self.__horseName.ljust(40) + (" ")
+        retStr = (retStr) + self.__horseOddsString.rjust(6)
         
         return (retStr)

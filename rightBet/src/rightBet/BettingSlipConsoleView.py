@@ -17,8 +17,8 @@ class BettingSlipConsoleView(object):
         '''
         Constructor
         '''
-        winBet = WinBetCalculator ()
-        ewBet = EachWayBetCalculator ()
+        self.__winBet = WinBetCalculator ()
+        self.__ewBet = EachWayBetCalculator ()
         
     def printToConsole(self, selectedHorses):
         print("============================\n")
@@ -28,9 +28,9 @@ class BettingSlipConsoleView(object):
         potentialWin = 0.00
         for horseOdds in selectedHorses:
             if horseOdds.isWinBet():
-                currentWin = self.winBet.calculate(horseOdds.getStake(), horseOdds.getHorseOddsDecimal(), 1)
+                currentWin = self.__winBet.calculate(horseOdds.getStake(), horseOdds.getHorseOddsDecimal(), 1)
                 print(self.bettingLine(horseOdds, currentWin))
-            totalCost = (totalCost) + (horseOdds.getStake())
+            totalCost = (totalCost) + float((horseOdds.getStake()))
             potentialWin = (potentialWin) + (currentWin)
         
         print("============================\n")
@@ -42,9 +42,12 @@ class BettingSlipConsoleView(object):
             
              
     def bettingLine(self, horseOdds, potentialWinnings):
-        retStr = horseOdds.toString() 
-        + (" stake ") + (horseOdds.getStake()) 
-        + (" winnings:") + (potentialWinnings)
+        retStr = horseOdds.toString()
+        retStr = (retStr) + (" stake ")
+        retStr = (retStr) + (horseOdds.getStake())
+        retStr = (retStr) + (" winnings: ")
+        retStr = (retStr) + ("{:.2f}".format(potentialWinnings))
+        
         return (retStr)
         
                 

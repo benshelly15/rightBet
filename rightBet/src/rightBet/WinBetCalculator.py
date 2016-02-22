@@ -21,7 +21,8 @@ class WinBetCalculator(object):
         
     def calculate(self, stake, odds, place):
         winAmount = 0.00
+        floatStake = float(stake)
         if place == 1:
-            winAmount = ((stake) * (odds)) + (stake)
+            winAmount = ((floatStake) * (odds)) + (floatStake)
         return round(winAmount, 2)
         

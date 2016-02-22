@@ -12,14 +12,17 @@ class CsvReader(object):
     '''
     classdocs
     '''
-
+    
     def __init__(self):
         '''
         Constructor
         '''
     
+            
+    
+    
     def readCsv(self):  
-        print (os.getcwd())
+        #print (os.getcwd())
         horseOddsArray = []
         with open("horse_name_and_odds.csv") as infile:
             reader = csv.reader(infile)
